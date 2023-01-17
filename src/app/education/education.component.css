@@ -1,11 +1,11 @@
 h1 {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 0px;
     margin-top: 0px;
 }
 
 .blog-card-blog {
-    margin-top: 30px;
+    margin-top: 20%;
 }
 
 .blog-card {
@@ -25,7 +25,7 @@ h1 {
     overflow: hidden;
     margin-left: 15px;
     margin-right: 15px;
-    margin-top: 10px;
+    margin-top: 5px;
     border-radius: 6px;
     box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
 }
@@ -85,7 +85,7 @@ p {
 
 p {
     margin-top: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
 }
 
 .blog-card .ftr {
@@ -120,15 +120,5 @@ p {
 }
 
 body {
-    background: linear-gradient(rgba(119, 151, 31, 0.26), rgba(0, 0, 0, .6));
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 80px;
-    width: 100%;
-    height: 100vh;
     background-image: url("https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/blogs/2147490846/images/oldpa16VSBegooJvBXoS_file.jpg");
 }

@@ -14,27 +14,21 @@ body,
 
 body {
     min-height: 100vh;
-    background: linear-gradient(45deg, #333, #5a5454);
-}
-
-.card {
-    margin-right: 5px;
-    margin-left: 5px;
+    background: linear-gradient(45deg, #333333, #5a5454);
 }
 
 .container {
-    position: flex;
-    width: 2100px;
+    position: relative;
+    width: 960px;
     display: flex;
     justify-content: space-around;
-    margin-left: 50px;
-    margin-top: 100px;
 }
 
 .container .card {
-    position: flex;
-    width: 1600px;
-    height: 300px;
+    position: relative;
+    width: 250px;
+    height: 330px;
+    border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.5);
     cursor: pointer;
     text-align: center;
@@ -134,54 +128,78 @@ body {
 
 .container .card:nth-child(1) svg circle:nth-child(2) {
     stroke-dashoffset: calc(440px - (440px * 90) / 100);
-    stroke: #63e2ff;
+    stroke: #1cf8ed;
 }
 
 .container .card:nth-child(2) svg circle:nth-child(2) {
     stroke-dashoffset: calc(440px - (440px * 80) / 100);
-    stroke: #d9e021;
+    stroke: #f1d760;
 }
 
 .container .card:nth-child(3) svg circle:nth-child(2) {
     stroke-dashoffset: calc(440px - (440px * 70) / 100);
-    stroke: #eb1c1c;
+    stroke: #ed1e79;
 }
 
 .container .card:nth-child(4) svg circle:nth-child(2) {
-    stroke-dashoffset: calc(440px - (440px *90) / 100);
-    stroke: #2068ee;
+    stroke-dashoffset: calc(440px - (440px * 90) / 100);
+    stroke: #0b22ec;
 }
 
 .container .card:nth-child(5) svg circle:nth-child(2) {
-    stroke-dashoffset: calc(440px - (440px *75) / 100);
-    stroke: #5aee20;
+    stroke-dashoffset: calc(440px - (440px * 80) / 100);
+    stroke: #2ef72e;
 }
 
 .container .card:nth-child(6) svg circle:nth-child(2) {
-    stroke-dashoffset: calc(440px - (440px *75) / 100);
-    stroke: #d51eed;
+    stroke-dashoffset: calc(440px - (440px * 80) / 100);
+    stroke: #ee0c0c;
 }
 
 .container .card:nth-child(7) svg circle:nth-child(2) {
-    stroke-dashoffset: calc(440px - (440px * 80) / 100);
-    stroke: #ed1e79;
+    stroke-dashoffset: calc(440px - (440px * 70) / 100);
+    stroke: #e62dff;
 }
 
 .container .card:nth-child(8) svg circle:nth-child(2) {
     stroke-dashoffset: calc(440px - (440px * 90) / 100);
-    stroke: #edb61e;
+    stroke: #ff149dd8;
 }
 
-section {
-    background: linear-gradient(rgba(119, 151, 31, 0.26), rgba(0, 0, 0, .6));
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 80px;
-    width: 100%;
-    height: 100vh;
+body {
     background-image: url("https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/blogs/2147490846/images/oldpa16VSBegooJvBXoS_file.jpg");
+}
+
+
+/* for large screens......................look below.............................*/
+
+@media screen and (max-width:600px) {
+    .container {
+        width: 90%;
+        height: 80%;
+        flex-direction: column;
+    }
+    .container .card {
+        width: 100%;
+        height: 70%;
+        padding: 100px;
+        margin-top: 20px;
+    }
+}
+
+
+/* for small screens..............................look below...................... */
+
+@media screen and (min-width:600px) {
+    .container {
+        width: 2200px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .container .card {
+        width: 2200px;
+        height: 350px;
+        margin-right: 1px;
+        margin-left: 1px;
+    }
 }
