@@ -14,41 +14,49 @@
             </div>
             <div class="col-md-6">
                 <h2 class="text-uppercase mt-3 font-weight-bold text-white">CONTACT</h2>
-                <form action="mailto:balajikalimuthu482@gmail.com" method="post" encrtype="text/plain">
+                <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="form-group">
-                                <input type="text" class="form-control mt-sm-2" placeholder="Name" required>
+                                <input type="text" name="name" class="form-control mt-sm-2" placeholder="Name" required
+                                    [(ngModel)]="name" #nameField="ngModel">
                             </div>
                         </div>
 
                         <div class="col-lg-6">
                             <div class="form-group">
-                                <input type="email" class="form-control mt-sm-2" placeholder="Email" required>
+                                <input type="email" name="email" class="form-control mt-sm-2" placeholder="Email" required email
+                                    [(ngModel)]="email" #emailField="ngModel">
                             </div>
                         </div>
 
                         <div class="col-12">
                             <div class="form-group">
-                                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Type your message here..." rows="3" required></textarea>
+                                <textarea class="form-control" name="message" id="exampleFormControlTextarea1" placeholder="Type your message here..." rows="3" required
+                                    [(ngModel)]="message" #messageField="ngModel"></textarea>
                             </div>
                         </div>
                         <div class="col-12">
-                            <div class="form-group">
-
+                            <div class="form-group text-white" *ngIf="status === 'sent'">
+                                Thanks! Your message has been sent &mdash; I&rsquo;ll get back to you soon.
+                            </div>
+                            <div class="form-group text-warning" *ngIf="status === 'error'">
+                                {{ errorMsg }}
                             </div>
                         </div>
                         <div class="col-12">
-                            <button class="btn btn-light" type="submit">Send</button>
+                            <button class="btn btn-light" type="submit" [disabled]="contactForm.invalid || status === 'sending'">
+                                {{ status === 'sending' ? 'Sending...' : 'Send' }}
+                            </button>
                         </div>
                     </div>
                 </form>
                 <div class="text-white">
                     <h2 class="text-uppercase mt-4 font-weight-bold">Get in touch...!</h2>
 
-                    <i class="fas fa-phone mt-3"></i> <a href="tel:+"> (+91) 8270691970</a><br>
+                    <i class="fas fa-phone mt-3"></i> <a href="tel:+918270691970"> (+91) 8270691970</a><br>
 
-                    <i class="fa fa-envelope mt-3"></i> <a href="balajikalimuthu482@gmail.com"> balajikalimuthu482@gmail.com</a><br>
+                    <i class="fa fa-envelope mt-3"></i> <a href="mailto:balajikalimuthu482@gmail.com"> balajikalimuthu482@gmail.com</a><br>
                     <i class="fas fa-globe mt-3"></i> 1/199 North street , Boduvarpatty ,Dindigul ,Tamil nadu.<br>
                     <!-- <i class="fas fa-globe mt-3"></i> Piazza del Colosseo, 1, 00184 Roma<br> -->
                     <div class="my-4">
