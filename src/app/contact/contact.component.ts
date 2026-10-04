@@ -10,9 +10,9 @@ import emailjs from '@emailjs/browser';
 // 4. Account -> General -> copy your "Public Key"
 // 5. Paste all three values below.
 // ---------------------------------------------------------------------------
-const EMAILJS_SERVICE_ID = 'service_xgcdbco';
-const EMAILJS_TEMPLATE_ID = 'template_ufmoldk';
-const EMAILJS_PUBLIC_KEY = 'mWmnQahPUY32siJBn';
+const EMAILJS_SERVICE_ID : string = 'service_xgcdbco';
+const EMAILJS_TEMPLATE_ID : string = 'template_ufmoldk';
+const EMAILJS_PUBLIC_KEY : string = 'mWmnQahPUY32siJBn';
 
 @Component({
   selector: 'app-contact',
